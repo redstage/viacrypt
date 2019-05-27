@@ -13,3 +13,4 @@ config/*
 !config/examples/
 
 *.swp
+.idea/

@@ -1,28 +1,14 @@
 /* /////////////////////////   INICIO COMUNS      */
-@font-face {
-    font-family: 'teuton23pro';
-    src: url('fonts/teuton23pro-webfont.eot');
-    src: url('fonts/teuton23pro-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/teuton23pro-webfont.woff') format('woff'),
-         url('fonts/teuton23pro-webfont.ttf') format('truetype'),
-         url('fonts/teuton23pro-webfont.svg#teuton23pro') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Droid Sans Mono';
-    src: url('fonts/DroidSansMono.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
 body {
 	background:url(img/bg-geral.png) no-repeat 50% 100px;
-	font-family:Tahoma, Geneva, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	line-height: 20px;
     padding-top: 115px;
 }
 ::selection {
-	background-color:#f2652a;
+	background-color:#d00a0a;
 	color:#fff;
 }
 a{
@@ -44,7 +30,7 @@ a{
 .navbar{
 	background:#fff;
 	height:95px;
-	border-top: #f2652a 5px solid;
+	border-top: #d00a0a 5px solid;
 	-webkit-box-shadow:0px 1px 8px 0px rgba(0, 0, 0, 0.75);
 	   -moz-box-shadow:0px 1px 8px 0px rgba(0, 0, 0, 0.75);
 	    -ms-box-shadow:0px 1px 8px 0px rgba(0, 0, 0, 0.75);
@@ -92,7 +78,7 @@ a{
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	background: #f2652a;
+	background: #d00a0a;
 	height: 2px;
 	width: 100%;
 	display:none\9;
@@ -130,7 +116,7 @@ a{
 .dropdown-menu li>a:hover, .dropdown-menu li>a:focus, .dropdown-submenu:hover>a {
 	text-decoration: none;
 	color: #ffffff;
-	background: #f2652a;
+	background: #d00a0a;
 }
 .dropdown-menu {
 	-webkit-box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
@@ -148,7 +134,7 @@ a{
 .page-title h1{
 	font-size:30px;
 	color:#b6b6b6;
-	font-family: 'teuton23pro';
+	font-family: 'Open Sans', sans-serif;
 	text-align:center;
 }
 .page-title h2{
@@ -168,11 +154,11 @@ label, input, button, select, textarea{
 	font-size:12px;
 }
 input, button, select, textarea{
-	font-family:Tahoma, Geneva, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size:12px;
 }
 .message {
-	font-family: "Droid Sans Mono", monospace;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
 }
 textarea.message {
@@ -196,7 +182,7 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(242,101,42,.6);
 	border-radius: 0;
 	background-image: inherit;
 	text-shadow: none;
-	background-color: #f2652a;
+	background-color: #d00a0a;
 	color:#fff;
 	font-size:12px;
 }
@@ -211,8 +197,8 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(242,101,42,.6);
 	background-color: #7b7b7b;
 }
 .input-append .add-on, .input-prepend .add-on{
-	background-color: #f2652a;
-	border: 1px solid #f2652a;
+	background-color: #d00a0a;
+	border: 1px solid #d00a0a;
 	text-shadow: none;
 	color:#ffffff;
 	padding-right:5px;
@@ -250,7 +236,7 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(242,101,42,.6);
 	background-color: #f9f9f9;	
 }
 .table-bordered th{
-	background-color: #f2652a;
+	background-color: #d00a0a;
 	color:#fff;
 	font-weight:normal;
 	text-align:center;	
@@ -300,7 +286,7 @@ body {
 	height:15px;
 	text-indent:-9999px;
 	float:left;
-	background:url(img/logo-vialink.png) no-repeat top center;	
+	background:url(img/logo-vialink.png) no-repeat top center;
 }
 
 .locale li{
@@ -315,6 +301,10 @@ body {
 .locale img{
     height: 30px;
     width: 30px
+}
+
+#git-ribbon {
+	display: none !important;
 }
 /* /////////////////////////   FIM FOOTER      */
 
@@ -331,8 +321,8 @@ body {
 	border-bottom: 1px solid #eee;
 }
 .modal-header h3{
-	color:#f2652a;
-	font-family: 'teuton23pro';
+	color:#d00a0a;
+	font-family: 'Open Sans', sans-serif;
 	font-size:26px;
 }
 .modal-footer {

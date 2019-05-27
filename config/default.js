@@ -37,8 +37,7 @@ cfg.assets_url = '/';
 //
 // the available langs are on locale dir
 cfg.enabled_langs = [
-	'en',
-	'br',
+	'en'
 ];
 
 
