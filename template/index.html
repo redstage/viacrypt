@@ -59,6 +59,11 @@
             <a class="brand" href="/" title="{{_ "ViaCRYPT"}}">{{_ "ViaCRYPT"}}</a>
             <div id="topmenu">
                 <ul class="nav pull-right-nav">
+                    <li><a href="#whatIsIt" role="button" data-toggle="modal" onclick="ga('send', 'event', 'what it is', 'click', 'modal', 1);">
+                        <span class="menu-hover menu-hover-top"></span>
+                        {{_ "What is it and how does it work?"}}
+                        <span class="menu-hover"></span>
+                    </a></li>
                     <li><a href="#forNerds" role="button" data-toggle="modal" onclick="ga('send', 'event', 'for nerds', 'click', 'modal', 1);">
                         <span class="menu-hover menu-hover-top"></span>
                         {{_ "Explanation for nerds"}}
@@ -131,6 +136,21 @@
     <div class="modal-body" id="messageText">
         <pre class="message"></pre>
         <span class="label label-important">{{_ "REMEMBER"}}</span> {{_ "This message has been deleted and cannot be read again."}}
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">{{_ "Close"}}</button>
+    </div>
+</div>
+
+<div id="whatIsIt" class="modal hide fade" tabindex="-1" role="dialog">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3>{{_ "What is it and how does it work?"}}</h3>
+    </div>
+    <div class="modal-body" id="whatIsItText">
+        <p>{{_ "This app is an encrypted messaging system where the recipient can read the message only once. After the reading, the message is deleted and cannot be retrieved anymore."}}</p>
+        <p>{{_ "The message is encrypted in your browser and stored into our servers. The key to decrypt the message is inside the generated URL and no one, but you and the recipient, has it. Thus, it is impossible to anyone, even us or any government to read the content of your message."}}</p>
+        <p>{{_ "The encryption system is so strong that all computers in the world together would take much more than one trillion years to break it. You can have more information about it"}} <a href="http://www.eetimes.com/document.asp?doc_id=1279619" target="_blank">{{_ "here"}}</a>.</p>
     </div>
     <div class="modal-footer">
         <button class="btn" data-dismiss="modal" aria-hidden="true">{{_ "Close"}}</button>
