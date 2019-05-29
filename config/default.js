@@ -81,11 +81,11 @@ cfg.notifications = {
 	// smtp backend with custom server
 	backend: {
 		type: 'smtp',
-		host: 'smtp.mailgun.org',
-		port: '587', // not needed if 25
+		host: process.env.SMTP_HOST,
+		port: process.env.SMTP_PORT, // not needed if 25
 		auth: {
-			user: 'postmaster@securemessage.redstage.com',
-			pass: '715313bb7838c319750eb32fb7c10c09-39bc661a-3a61baf5'
+			user: process.env.SMTP_USER,
+			pass: process.env.SMTP_PASSWORD
 		}
 	}
 	// smtp backend using gmail service
