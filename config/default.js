@@ -72,7 +72,7 @@ cfg.provider = {
 //cfg.notifications = null;
 cfg.notifications = {
 	hide_header: false,
-	sender: 'Redstage Secure <***REMOVED***>',
+	sender: 'Redstage Secure <postmaster@securemessage.redstage.com>',
 	// file backend
 	// backend: {
 	// 	type: 'file',
@@ -81,11 +81,11 @@ cfg.notifications = {
 	// smtp backend with custom server
 	backend: {
 		type: 'smtp',
-		host: 'smtp.mailgun.org',
-		port: '587', // not needed if 25
+		host: process.env.SMTP_HOST,
+		port: process.env.SMTP_PORT, // not needed if 25
 		auth: {
-			user: '***REMOVED***',
-			pass: '***REMOVED***'
+			user: process.env.SMTP_USER,
+			pass: process.env.SMTP_PASSWORD
 		}
 	}
 	// smtp backend using gmail service
