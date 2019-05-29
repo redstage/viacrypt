@@ -1,3 +1,5 @@
+var dotenv = require('dotenv');
+dotenv.config();
 var join = require('path').join;
 var cfg = {};
 
@@ -16,10 +18,10 @@ cfg.http = {
 // URL used when generating URL client-side and when retrieving a message.
 // Never prefix the protocol (http or https). It is generated according to
 // the access.
-cfg.baseurl = '//' + cfg.http.listen + ':' + cfg.http.port;
+cfg.baseurl = '//' + process.env.BASE_URL;
 
 // cfg URL will be used on the footer links on mails
-cfg.siteurl = 'http:' + cfg.baseurl;
+cfg.siteurl = process.env.SITE_URL;
 
 // you might want to disable serving static files on production to avoid
 // unecessary hassles that may come with it. (set to false to disable)

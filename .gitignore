@@ -14,3 +14,4 @@ config/*
 
 *.swp
 .idea/
+.env
