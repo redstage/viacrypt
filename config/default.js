@@ -72,22 +72,22 @@ cfg.provider = {
 //cfg.notifications = null;
 cfg.notifications = {
 	hide_header: false,
-	sender: 'ViaCRYPT Notifications <viacrypt@localhost>',
+	sender: 'Redstage Secure <***REMOVED***>',
 	// file backend
-	backend: {
-		type: 'file',
-		filepath: join(__basedir, 'mail.log')
-	}
+	// backend: {
+	// 	type: 'file',
+	// 	filepath: join(__basedir, 'mail.log')
+	// }
 	// smtp backend with custom server
-	//backend: {
-	//	type: 'smtp',
-	//	host: 'smtp.star.wars',
-	//	port: '465', // not needed if 25
-	//	auth: {
-	//		user: 'darthvader',
-	//		pass: 'd4rkf0rc3'
-	//	}
-	//}
+	backend: {
+		type: 'smtp',
+		host: 'smtp.mailgun.org',
+		port: '587', // not needed if 25
+		auth: {
+			user: '***REMOVED***',
+			pass: '***REMOVED***'
+		}
+	}
 	// smtp backend using gmail service
 	//backend: {
 	//	type: 'smtp',
