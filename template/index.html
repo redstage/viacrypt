@@ -59,6 +59,11 @@
             <a class="brand" href="/" title="{{_ "ViaCRYPT"}}">{{_ "ViaCRYPT"}}</a>
             <div id="topmenu">
                 <ul class="nav pull-right-nav">
+                    <li><a href="#forNerds" role="button" data-toggle="modal" onclick="ga('send', 'event', 'for nerds', 'click', 'modal', 1);">
+                        <span class="menu-hover menu-hover-top"></span>
+                        {{_ "Explanation for nerds"}}
+                        <span class="menu-hover"></span>
+                    </a></li>
                     <li><a href="#contactUs" role="button" data-toggle="modal" onclick="ga('send', 'event', 'contact us', 'click', 'modal', 1);">
                         <span class="menu-hover menu-hover-top"></span>
                         {{_ "Contact Us"}}
@@ -126,6 +131,21 @@
     <div class="modal-body" id="messageText">
         <pre class="message"></pre>
         <span class="label label-important">{{_ "REMEMBER"}}</span> {{_ "This message has been deleted and cannot be read again."}}
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">{{_ "Close"}}</button>
+    </div>
+</div>
+
+<div id="forNerds" class="modal hide fade" tabindex="-1" role="dialog">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3>{{_ "For nerds.."}}</h3>
+    </div>
+    <div class="modal-body" id="forNerdsText">
+        <p>{{_ "The message is encrypted using AES and has a 256-bit key as passphrase. The passphrase is randomly generated at your browser, then the message is encrypted and stored into our servers through an unique identifier. The generated URL is composed of two parts: the unique identified and the random passphrase. Both are in the fragment of the URL and are not sent to our webserver when the URL is opened."}}</p>
+        <p>{{_ "When the generated URL is opened, a javascript code parses the URL and retrieve the message by its unique identifier. The servers return the message and delete it at once. Then, the message is decrypted in your browser using the passphrase and is presented to you. If you try to open the same message again, our servers will return a 404 status code because the message no longer exists."}}</p>
+        <p>{{_ "One can argue that someone might retrieve your message and make it unavailable to you. Although it is possible, the unique identifiers are randomly generated using RFC4122 v4 UUID and the probability of a random hit is about 8.64E-78."}}</p>
     </div>
     <div class="modal-footer">
         <button class="btn" data-dismiss="modal" aria-hidden="true">{{_ "Close"}}</button>
