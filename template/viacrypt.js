@@ -50,6 +50,13 @@ $(function() {
 		}
 	}
 
+	var clipboard = new ClipboardJS('.btn-clipboard');
+
+	clipboard.on('success', function(e) {
+		console.log('Text copied');
+		e.clearSelection();
+	});
+
 	if (baseurl.indexOf('http:') === 0 || baseurl.indexOf('https:') === 0) {
 		baseurl = baseurl.substring(baseurl.indexOf(':') + 1);
 	}

@@ -47,6 +47,7 @@
 <script src="{{static "lib/js/jquery.min.js"}}"></script>
 <script src="{{static "lib/js/touchscroll.min.js"}}"></script>
 <script src="{{static "lib/js/bootstrap.min.js"}}"></script>
+<script src="{{static "lib/js/clipboard.min.js"}}"></script>
 <script src="viacrypt.js"></script>
 {{#if livereload}}<script src="http://{{livereload}}/livereload.js"></script>{{/if}}
 </head>
@@ -109,6 +110,7 @@
         </div>
         <div id="showUrl" class="well hide">
             <p>{{_ "Single-use URL:"}} <span class="url"></span></p>
+            <p class="clearfix"><button type="button" class="btn btn-clipboard pull-right" data-clipboard-target="#url-field">Copy URL</button></p>
             <p><span class="label label-important">{{_ "IMPORTANT"}}</span> {{_ "This message can be read only once and will be deleted on the first read."}}</p>
         </div>
 
@@ -134,7 +136,11 @@
         <h3>{{_ "Your message is..."}}</h3>
     </div>
     <div class="modal-body" id="messageText">
-        <pre class="message"></pre>
+        <div class="clearfix clipboard-container">
+            <button class="btn btn-clipboard pull-right"
+                    data-clipboard-target="#message-secure">Copy to Clipboard</button>
+        </div>
+        <pre id="message-secure" class="message"></pre>
         <span class="label label-important">{{_ "REMEMBER"}}</span> {{_ "This message has been deleted and cannot be read again."}}
     </div>
     <div class="modal-footer">
