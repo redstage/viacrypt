@@ -36,20 +36,6 @@ $(function() {
 	$("#iosmenu").html($("#topmenu").html());
 	$("#iosmenu").find(".menu-hover").remove();
 
-	//TODO is it necessary to apply a fix only to android versions lower than 3.0?
-	//     if it is really android specific than it's ok, and also should be simplified with regex
-	//     if it is due to a functionality it's preferrable to use feature detection instead of UA sniff
-	var ua = navigator.userAgent;
-	if(ua.indexOf("android")) {
-		var version = parseFloat(ua.slice(ua.indexOf("Android")+8));
-		if(version < 3.0) {
-			var modals = $('.modal-body');
-			modals.each(function(i,el) {
-				touchScroll(el.id);
-			});
-		}
-	}
-
 	var clipboard = new ClipboardJS('.btn-clipboard');
 
 	clipboard.on('success', function(e) {
