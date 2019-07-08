@@ -97,7 +97,11 @@ i18n.localized_static = function(connect, root, options) {
 		if (i18n.get_locale(req.url)) {
 			return static_default(req, res, next);
 		} else {
-			return statics[i18n.best_locale(req)](req, res, next);
+			var bestLocale = i18n.best_locale(req);
+			if (bestLocale !== 'en' && bestLocale !== 'br') {
+				bestLocale = 'en';
+			}
+			return statics[bestLocale](req, res, next);
 		}
 	};
 };
